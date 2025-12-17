@@ -1,90 +1,173 @@
-# Project XYZ
+# Loan Approval Analysis Project
 
-**Project XYZ** is a comprehensive data analysis tool designed to streamline data exploration, analysis, and visualisation. The tool supports multiple data formats and provides an intuitive interface for both novice and expert data scientists.
+![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+## Project Overview
 
+This project analyses a loan approval dataset sourced from Kaggle to identify patterns and factors that influence whether a loan application is approved or rejected. The project uses Python-based data analysis techniques to explore applicant demographics, financial characteristics, and credit history, with the aim of generating insights that could support decision-making in the financial services industry.
+
+The analysis focuses on exploratory data analysis (EDA) and visualisation to uncover relationships between variables such as income, loan amount, credit history, and loan status.
+
+---
 
 ## Dataset Content
-* Describe your dataset. Choose a dataset of reasonable size to avoid exceeding the repository's maximum size of 100Gb.
 
+The dataset used in this project is the **Loan Approval Classification Dataset** obtained from Kaggle:
+
+https://www.kaggle.com/datasets/taweilo/loan-approval-classification-data
+
+The dataset contains loan application records with the following types of variables:
+
+- Applicant demographics (e.g. gender, marital status, education)
+- Financial information (e.g. applicant income, co-applicant income, loan amount)
+- Loan characteristics (e.g. loan term, property area)
+- Credit history
+- Target variable indicating whether the loan was approved or not
+
+The dataset is of a manageable size and suitable for exploratory analysis and visualisation within the project constraints.
+
+---
 
 ## Business Requirements
-* Describe your business requirements
 
+The primary business requirements for this project are:
 
-## Hypothesis and how to validate?
-* List here your project hypothesis(es) and how you envision validating it (them) 
+1. Identify key factors associated with loan approval decisions.
+2. Understand how applicant income and loan amount relate to approval outcomes.
+3. Explore whether demographic or categorical variables influence loan approval rates.
+4. Present insights in a clear and interpretable way for both technical and non-technical stakeholders.
+
+---
+
+## Hypotheses and Validation
+
+The following hypotheses guide the analysis:
+
+1. Applicants with a positive credit history are more likely to have their loans approved.
+2. Higher applicant income is associated with higher loan approval rates.
+3. Loan amount and loan term influence the likelihood of approval.
+4. Certain demographic factors (such as education level or property area) show differences in approval outcomes.
+
+These hypotheses are validated through:
+- Descriptive statistics
+- Grouped comparisons
+- Data visualisations (histograms, bar charts, scatter plots, and box plots)
+
+---
 
 ## Project Plan
-* Outline the high-level steps taken for the analysis.
-* How was the data managed throughout the collection, processing, analysis and interpretation steps?
-* Why did you choose the research methodologies you used?
 
-## The rationale to map the business requirements to the Data Visualisations
-* List your business requirements and a rationale to map them to the Data Visualisations
+### High-Level Steps
+1. Load and inspect the dataset.
+2. Clean and preprocess the data (handling missing values and data types).
+3. Perform exploratory data analysis (EDA).
+4. Visualise key relationships relevant to business questions.
+5. Interpret results and summarise insights.
 
-## Analysis techniques used
-* List the data analysis methods used and explain limitations or alternative approaches.
-* How did you structure the data analysis techniques. Justify your response.
-* Did the data limit you, and did you use an alternative approach to meet these challenges?
-* How did you use generative AI tools to help with ideation, design thinking and code optimisation?
+### Data Management
+- Data was extracted from a CSV file.
+- Cleaning steps included handling missing values and ensuring correct data types.
+- Data transformations were applied where necessary to support analysis and visualisation.
 
-## Ethical considerations
-* Were there any data privacy, bias or fairness issues with the data?
-* How did you overcome any legal or societal issues?
+### Methodology Rationale
+Exploratory data analysis was chosen to allow flexible investigation of patterns and relationships without making strong modelling assumptions. Visual analysis supports clearer communication of insights to business stakeholders.
+
+---
+
+## Mapping Business Requirements to Visualisations
+
+| Business Requirement | Visualisation Used | Rationale |
+|---------------------|------------------|-----------|
+| Income vs loan approval | Box plots, scatter plots | Compare distributions across approval outcomes |
+| Loan amount patterns | Histograms | Understand typical loan sizes |
+| Categorical impacts | Bar charts | Compare approval rates across categories |
+| Credit history impact | Grouped bar charts | Highlight approval differences clearly |
+
+---
+
+## Analysis Techniques Used
+
+- Descriptive statistics using Pandas
+- Grouped aggregations
+- Exploratory visualisations using Matplotlib and Seaborn
+
+### Limitations and Alternatives
+- The dataset is observational and does not imply causation.
+- No predictive modelling was performed; future work could include classification models.
+- Some missing values limit the completeness of certain analyses.
+
+### Use of Generative AI
+Generative AI tools were used to:
+- Support ideation for business questions
+- Improve code readability and structure
+- Assist with documentation clarity
+
+All outputs were reviewed and adapted to ensure understanding and originality.
+
+---
+
+## Ethical Considerations
+
+- The dataset contains anonymised data and does not include personally identifiable information.
+- Potential bias may exist in historical loan approval decisions.
+- Results are interpreted cautiously to avoid reinforcing unfair or discriminatory conclusions.
+
+---
 
 ## Dashboard Design
-* List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other item that your dashboard library supports.
-* Later, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project you were confident you would use a given plot to display an insight but subsequently you used another plot type).
-* How were data insights communicated to technical and non-technical audiences?
-* Explain how the dashboard was designed to communicate complex data insights to different audiences. 
+
+This project focuses on notebook-based visualisation rather than a deployed dashboard.
+
+Planned visual elements include:
+- Histograms for numeric distributions
+- Bar charts for categorical comparisons
+- Scatter plots for relationship analysis
+- Box plots for outcome comparison
+
+Insights are communicated using clear visualisations supported by written explanations for both technical and non-technical audiences.
+
+---
 
 ## Unfixed Bugs
-* Please mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable to consider, paucity of time and difficulty understanding implementation are not valid reasons to leave bugs unfixed.
-* Did you recognise gaps in your knowledge, and how did you address them?
-* If applicable, include evidence of feedback received (from peers or instructors) and how it improved your approach or understanding.
+
+- Some missing values remain where imputation could introduce bias.
+- Certain categorical variables have imbalanced classes, limiting comparison depth.
+
+These issues were documented and considered during interpretation.
+
+---
 
 ## Development Roadmap
-* What challenges did you face, and what strategies were used to overcome these challenges?
-* What new skills or tools do you plan to learn next based on your project experience? 
+
+### Challenges Faced
+- Handling missing data without distorting distributions
+- Selecting visualisations that best support business questions
+
+### Future Improvements
+- Build a predictive loan approval model
+- Perform feature importance analysis
+- Expand analysis with additional datasets
+
+---
 
 ## Deployment
-### Heroku
 
-* The App live link is: https://YOUR_APP_NAME.herokuapp.com/ 
-* Set the runtime.txt Python version to a [Heroku-20](https://devcenter.heroku.com/articles/python-support#supported-runtimes) stack currently supported version.
-* The project was deployed to Heroku using the following steps.
+This project was not deployed as a live application, as the focus was on exploratory data analysis rather than application development.
 
-1. Log in to Heroku and create an App
-2. From the Deploy tab, select GitHub as the deployment method.
-3. Select your repository name and click Search. Once it is found, click Connect.
-4. Select the branch you want to deploy, then click Deploy Branch.
-5. The deployment process should happen smoothly if all deployment files are fully functional. Click now the button Open App on the top of the page to access your App.
-6. If the slug size is too large then add large files not required for the app to the .slugignore file.
-
+---
 
 ## Main Data Analysis Libraries
-* Here you should list the libraries you used in the project and provide an example(s) of how you used these libraries.
 
+- **Pandas**: Data loading, cleaning, and analysis
+- **NumPy**: Numerical operations
+- **Matplotlib**: Core plotting library
+- **Seaborn**: Enhanced statistical visualisations
 
-## Credits 
+Example:
+```python
+import pandas as pd
+import seaborn as sns
 
-* In this section, you need to reference where you got your content, media and extra help from. It is common practice to use code from other repositories and tutorials, however, it is important to be very specific about these sources to avoid plagiarism. 
-* You can break the credits section up into Content and Media, depending on what you have included in your project. 
+df = pd.read_csv("loan_data.csv")
+sns.boxplot(data=df, x="Loan_Status", y="LoanAmount")
 
-### Content 
-
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign-Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site
-- The images used for the gallery page were taken from this other open-source site
-
-
-
-## Acknowledgements (optional)
-* Thank the people who provided support through this project.
