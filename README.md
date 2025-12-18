@@ -44,9 +44,9 @@ The primary business requirements for this project are:
 The following hypotheses guide the analysis:
 
 1. Applicants with a positive credit history are more likely to have their loans approved.
-2. Higher applicant income is associated with higher loan approval rates.
-3. Loan amount and loan term influence the likelihood of approval.
-4. Certain demographic factors (such as education level or property area) show differences in approval outcomes.
+2. Applicants with higher income relative to requested loan amounts have a higher likelihood of approval.
+3. Young applicants or those with short employment history might be less likely to get approved.
+4. Home ownership status may impact loan approval.
 
 These hypotheses are validated through:
 - Descriptive statistics
