@@ -94,7 +94,7 @@ Exploratory data analysis was chosen to allow flexible investigation of patterns
 ### Limitations and Alternatives
 - The dataset is observational and does not imply causation.
 - No predictive modelling was performed; future work could include classification models.
-- Some missing values limit the completeness of certain analyses.
+- Some missing values could limit the completeness of certain analyses.
 
 ### Use of Generative AI
 Generative AI tools were used to:
@@ -118,7 +118,7 @@ All outputs were reviewed and adapted to ensure understanding and originality.
 
 This project focuses on notebook-based visualisation rather than a deployed dashboard.
 
-Planned visual elements include:
+Planned visual elements can include but not limited to:
 - Histograms for numeric distributions
 - Bar charts for categorical comparisons
 - Scatter plots for relationship analysis
